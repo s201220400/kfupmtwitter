@@ -1,0 +1,20 @@
+{
+  "name": "twitter-application",
+  "version": "1.0.0",
+  "description": "Twitter application for KFUPM public relations department.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mozafar Abdulghani",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jade": "^1.11.0",
+    "twitter": "^1.7.0"
+  },
+  "engines": {
+    "node": "7.8.0"
+  }
+}

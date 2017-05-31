@@ -1,0 +1,31 @@
+html
+    head
+        title KFUPM Application for Twitter
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        style.
+            body {
+                background-image: url("/images/background.jpg");
+                background-color: #696969;
+            }
+    
+        div.row
+            div.col-md-6.col-md-offset-3
+                br
+                br
+                br
+                h1.text-center(style='font-family:cursive; font-size:50px; color:white') KFUPM Twitter Application
+
+                br
+                br
+                div.row
+                    div.col-xs-6.col-md-6
+                        img.img-responsive.center-block(src= "/images/KFUPM_logo.png",  width="250")
+                    div.col-xs-6.col-md-6
+                        img.img-responsive.center-block(src= "/images/Twitter_logo.png",  width="250")
+
+                br
+                br
+                form.row-md-4.col-md-4.col.col-md-offset-4(action="get_tweets", method="POST")
+                    input(type="hidden", name="counter", value="0")
+                    input.form-control.btn.btn-primary(type="submit", value="Get Tweets", style='font-family:cursive; font-size:18px')
+                

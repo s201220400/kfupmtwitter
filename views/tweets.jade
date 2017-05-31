@@ -1,0 +1,40 @@
+html
+    head
+        title KFUPM Application for Twitter
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        style.
+            body {
+                background-color: #696969;
+            }
+    
+    body
+        div.row
+            div.col-md-6.col-md-offset-3
+                div.row
+                    div.col-md-2.col-md-offset-1
+                        img.img-responsive(src= "/images/KFUPM_logo.png",  width="93")
+                    div.col-md-6.w3-container
+                        br
+                        span.text-center(style='font-family:cursive; font-size: 26px; color:white') KFUPM Related Tweets
+                    div
+                        img.img-responsive(src= "/images/Twitter_logo.png",  width="80")
+
+                ul.list-group
+                    each tweet_list in tweet
+                        a.list-group-item(href= "https://twitter.com/" + tweet_list.screen_name)
+                            div.row
+                                div.col-xs-1.col-md-1
+                                    img(src=tweet_list.image)
+                                div.col-xs-6.col-md-6.w3-container
+                                    b= tweet_list.name
+                                    p(style='color:DarkGray')= tweet_list.screen_name
+                            div(style='font-size: 16px')= tweet_list.text
+                        br
+
+         div.row
+            div.col-md-3.col-md-offset-3.w3-container
+                input.form-control.btn.btn-primary(onclick='window.print()', value="Print Tweets", style='font-family:cursive; font-size:17px')
+            div.col-md-3.w3-container
+                form(action="get_tweets", method="POST")
+                    input(type="hidden", name="counter", value=tweet_count)
+                    input.form-control.btn.btn-primary(type="submit", value="More Tweets", style='font-family:cursive; font-size:17px')
