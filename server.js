@@ -23,6 +23,6 @@ app.post('/get_tweets', function(request, response){
     var tweets = twitterApp(response, Number(request.body.counter));
 });
 
-var server = app.listen(8888, function(){
-    console.log("Listening on port 8888");
+var server = app.listen(8080, function(){
+    console.log("Listening on port 8080");
 });
